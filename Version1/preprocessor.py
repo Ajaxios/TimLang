@@ -48,33 +48,37 @@ for x in range(len(lines)):
         if '?' in words[y]:
             variable_declaration = True
             break
-    
-    # Variable declaration (Number or bool)
-    if variable_declaration and len(words) == 2:
-        variable_name = words[0].replace('?', '')
-        variable_value = words[1]
-        if type(variable_value) == int or is_float(variable_value):
-            py_input = f"{variable_name} = {variable_value}"
-        else:
-            if variable_value.lower() == truebool:
-                py_input = f"{variable_name} = True"
-            else:
-                py_input = f"{variable_name} = False"
-    
-    # Variable declaration (String)
-    elif (variable_declaration):
+    # String variable?
+    if variable_declaration:
+        is_string = False
         for y in range(len(words)):
             if '\"' in words[y]:
                 is_string = True
-        if (is_string):
+    
+    # Variable declaration (Number or bool)
+    if variable_declaration and len(words) == 2:
+        if not is_string:
             variable_name = words[0].replace('?', '')
-            py_input = variable_name
-            words.pop(0)
-            string_value = ""
-            for z in words:
-                string_value += z + " "
-            # variable_value = [word[1:] for word in words]
-            py_input = f"{variable_name} = {string_value}"
+            variable_value = words[1]
+            if type(variable_value) == int or is_float(variable_value):
+                py_input = f"{variable_name} = {variable_value}"
+            else:
+                if variable_value.lower() == truebool:
+                    py_input = f"{variable_name} = True"
+                else:
+                    py_input = f"{variable_name} = False"
+    
+    # Variable declaration (String)
+    if (variable_declaration and is_string):
+        print("AHA!")
+        variable_name = words[0].replace('?', '')
+        py_input = variable_name
+        words.pop(0)
+        string_value = ""
+        for z in words:
+            string_value += z + " "
+        # variable_value = [word[1:] for word in words]
+        py_input = f"{variable_name} = {string_value}"
 
 
 

@@ -13,6 +13,6 @@ preis? 1999.99
 
 #### String
 ```python
-name? "Tim Zimmerbuch"
+name? "Tims Bücherzimmer"
 ```
 

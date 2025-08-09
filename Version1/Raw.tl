@@ -16,3 +16,5 @@ Hallo
 zitat? "11 88 0, da werden wir Sie helfen tun."
 
 preisAusgabe? "Das kostet " + preis + "€."
+
+zitat? "Aha!"
