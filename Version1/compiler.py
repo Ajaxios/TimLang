@@ -18,7 +18,7 @@ def is_float(value):
 def get_packages():
     return "import random"
 
-with open ("output.py", "w") as f:
+with open ("Version1\\output.py", "w") as f:
     f.write("# Welcome to the Compiler!\n")
     f.write(f"{get_packages()}\n")
 
@@ -93,33 +93,37 @@ for x in range(len(lines)):
         if amount_of_dices == "1":
             if dice == "4":
                 py_input += f"random.randint(1, 4)"
-            if dice == "6":
+            elif dice == "6":
                 py_input += f"random.randint(1, 6)"
-            if dice == "8":
+            elif dice == "8":
                 py_input += f"random.randint(1, 8)"
-            if dice == "10":
+            elif dice == "10":
                 py_input += f"random.randint(1, 10)"
-            if dice == "12":
+            elif dice == "12":
                 py_input += f"random.randint(1, 12)"
-            if dice == "20":
+            elif dice == "20":
                 py_input += f"random.randint(1, 20)"
-            if dice == "100":
+            elif dice == "100":
                 py_input += f"random.randint(1, 100)"
+            else:
+                py_input += "0"
         else:
             if dice == "4":
                 py_input += f"[random.randint(1, 4) for x in range({amount_of_dices})]"
-            if dice == "6":
+            elif dice == "6":
                 py_input += f"[random.randint(1, 6) for x in range({amount_of_dices})]"
-            if dice == "8":
+            elif dice == "8":
                 py_input += f"[random.randint(1, 8) for x in range({amount_of_dices})]"
-            if dice == "10":
+            elif dice == "10":
                 py_input += f"[random.randint(1, 10) for x in range({amount_of_dices})]"
-            if dice == "12":
+            elif dice == "12":
                 py_input += f"[random.randint(1, 12) for x in range({amount_of_dices})]"
-            if dice == "20":
+            elif dice == "20":
                 py_input += f"[random.randint(1, 20) for x in range({amount_of_dices})]"
-            if dice == "100":
+            elif dice == "100":
                 py_input += f"[random.randint(1, 100) for x in range({amount_of_dices})]"
+            else:
+                py_input += f"[0 for x in range({amount_of_dices})]"
     #endregion
 
 
@@ -138,9 +142,13 @@ for x in range(len(lines)):
             if (y < len(words) - 1):
                 print_content += " "
         py_input = f"print({print_content})"
-
     #endregion
     
+    #region Schere
+    if len(words) == 1:
+        if words[0].lower() == "schere":
+            py_input = "print(\"Schere\")"
+    #endregion
 
     # Variable declaration
     # if '?' in words:
@@ -158,5 +166,5 @@ for x in range(len(lines)):
     #         py_input += y 
     #     py_input = f"# {py_input}"
 
-    with open ("output.py", "a") as f:
+    with open ("Version1\\output.py", "a") as f:
         f.write(py_input + "\n")

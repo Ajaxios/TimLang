@@ -42,3 +42,12 @@ Schere
 
 # Random number (only 1d4, 1d6, 1d8, 1d10, 1d12, 1d20)
 /roll 1d20
+
+# If Condition
+schwöre True {
+    rede "Okay check"
+}
+# else Condition
+schere {
+    rede "Du kleiner Airi"
+}

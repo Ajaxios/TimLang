@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Basics.md",
+                "file": "Version2/Changelog.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Basics"
+              "title": "Changelog"
             }
           }
         ]
@@ -170,8 +170,16 @@
   },
   "active": "b9579a552fd10f1a",
   "lastOpenFiles": [
-    "Inside.md",
-    "Tutorial.md",
-    "Basics.md"
+    "Version1/Changelog.md",
+    "Version2/Changelog.md",
+    "Version1/Inside.md",
+    "Version1/Tutorial.md",
+    "Version2/Basics.md",
+    "Version1/Basics.md",
+    "Version2/Inside.md",
+    "Version2/Tutorial.md",
+    "Version2",
+    "Version1",
+    "Untitled.canvas"
   ]
 }
