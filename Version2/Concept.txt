@@ -1,0 +1,53 @@
+Concept of TimLang .tl
+
+# Declaring a variable
+produktiv? nein
+
+# Creating a Tim (prints 'Herzlich willkommen bei der Telekom, Tim!")
+Stelle Tim ein
+
+# Set properties for Tim
+Tim produktiv? ja
+Tim booster? 5
+Tim Tischkicker? ja
+Tim JavaScript-Tutorial? ja
+Tim SAP-Tutorial? nein
+
+# Defining functions
+Zeig Home-Office {
+    # Console output
+    rede "Tim macht HO"
+}
+
+Zeig Baguette {
+    # ...
+}
+
+# Loop
+Crashout 20 {
+    rede "Kurbeln!"
+}
+
+
+
+# Calling functions
+Tim macht Home-Office
+Tim macht Baguette
+Tim macht JavaScript-Tutorial
+Tim macht SAP-Tutorial
+Tim macht Energy
+
+# Printing out ✂️
+Schere
+
+# Random number (only 1d4, 1d6, 1d8, 1d10, 1d12, 1d20)
+/roll 1d20
+
+# If Condition
+schwöre True {
+    rede "Okay check"
+}
+# else Condition
+schere {
+    rede "Du kleiner Airi"
+}

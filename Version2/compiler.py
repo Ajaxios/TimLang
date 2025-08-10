@@ -150,5 +150,21 @@ for x in range(len(lines)):
             py_input = "print(\"Schere\")"
     #endregion
 
+    # Variable declaration
+    # if '?' in words:
+    #     print("? insinde!")
+    #     for y in range(len(words)):
+    #         if '?' in words[y]:
+    #             print("? insinde!")
+    #             variable_name = x.replace("?", "")
+    #         else:
+    #             variable_value = words[y]
+    #     py_input += f"{variable_name} = {variable_value}"
+    # else:
+    #     for y in words:
+    #         y.replace ("#", "")
+    #         py_input += y 
+    #     py_input = f"# {py_input}"
+
     with open ("Version1\\output.py", "a") as f:
         f.write(py_input + "\n")
