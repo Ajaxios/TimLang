@@ -8,3 +8,11 @@ zweitesZitat? "Juhuu ich bin ein  Zitat!"
 nummer? /roll 1d20
 nummerZwei? /roll 1d100
 nummern? /roll 5d100
+name? "Tim"
+buecher? 50
+satz? "Ich heiße", name, "und habe", buecher, "Bücher gebunkert."
+name? "Tim"
+buecher? 50
+satz? "Ich heiße " + name + " und habe " + str(buecher) + " Bücher gebunkert."
+rede "Jo! Was geht? Ich habe    einige Bücher"
+rede name + " <- ein toller Name!"

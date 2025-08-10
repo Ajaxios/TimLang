@@ -32,7 +32,7 @@ for x in range(len(lines)):
     #region Variables
     for y in range(len(words)):
         # Variable declaration?
-        if '?' in words[y]:
+        if '?' in words[0]:
             variable_declaration = True
             break
     # String variable?
@@ -84,7 +84,7 @@ for x in range(len(lines)):
                 roll_index = y
                 dice = words[y+1]
                 break
-        # breaking down roll xdy
+        # breaking down /roll xdy
         dices = dice.split('d')
         amount_of_dices = dices[0]
         dice = dices[1]
@@ -129,6 +129,17 @@ for x in range(len(lines)):
 
     #endregion
 
+    #region printing out 
+    if words[0] == "rede":
+        print_content = ""
+        for y in range(1, len(words)):
+            print_content += words[y]
+            # Add Space but not at the end - formatting perfection skill issue
+            if (y < len(words) - 1):
+                print_content += " "
+        py_input = f"print({print_content})"
+
+    #endregion
     
 
     # Variable declaration

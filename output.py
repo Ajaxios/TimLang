@@ -10,3 +10,11 @@ zweitesZitat = "Juhuu ich bin ein Zitat!"
 nummer = random.randint(1, 20)
 nummerZwei = random.randint(1, 100)
 nummern = [random.randint(1, 100) for x in range(5)]
+name = "Tim" 
+buecher = 50
+satz = "Ich heiße", name, "und habe", buecher, "Bücher gebunkert." 
+name = "Tim" 
+buecher = 50
+satz = "Ich heiße " + name + " und habe " + str(buecher) + " Bücher gebunkert." 
+print("Jo! Was geht? Ich habe einige Bücher")
+print(name + " <- ein toller Name!")
