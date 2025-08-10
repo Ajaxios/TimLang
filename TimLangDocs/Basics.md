@@ -16,3 +16,14 @@ preis? 1999.99
 name? "Tims Bücherzimmer"
 ```
 
+#### Random Number
+```python
+# Generiert eine Zahl zwischen 1 und 20
+nummer? /roll1d20
+```
+
+#### Random Numbers
+```python
+# Generiert ein Array aus 3 zufälligen Zahlen zwischen 1 und 100
+nummern? /roll3d100
+```

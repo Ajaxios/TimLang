@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Inside.md",
+                "file": "Basics.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Inside"
+              "title": "Basics"
             }
           }
         ]
@@ -170,8 +170,8 @@
   },
   "active": "b9579a552fd10f1a",
   "lastOpenFiles": [
-    "Basics.md",
     "Inside.md",
-    "Tutorial.md"
+    "Tutorial.md",
+    "Basics.md"
   ]
 }
