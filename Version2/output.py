@@ -24,10 +24,12 @@ rand = 0
 print(rand)
 print("Schere")
 print("Hallo")
-for x in range(3):
-	print("Hallo!")
-	for x in range(2):
-		rand = random.randint(1, 100)
-		print(rand)
+for x in range(5):
+	print(f"Ich fange mit Buch {x} an.")
+	for xx in range(20):
+		print(f"Ich bin bei Seite {xx} vom Buch {x}.")
+		for xxx in range(30):
+			print(f"Ich bin bei Zeile {xxx} der Seite {xx} vom Buch {x}.")
+			
 		
 	

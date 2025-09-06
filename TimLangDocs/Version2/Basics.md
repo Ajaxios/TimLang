@@ -105,3 +105,38 @@ Crashout 20
 rede "Hallo!"
 sbyau
 ```
+
+#### Counter variable
+Die Zählvariable ist bei einem einzelnen Loop `x`.
+```python
+Crashout 10
+rede f"Ich habe {x+1} Kakaos getrunken!"
+sybau
+```
+
+#### Nested Loops
+Nested Loops können eingebaut werden. Ihre Zählervariable ist bei dem ersten inneren Loop `xx`, beim 2. inneren Loop `xxx` usw...
+```python
+Crashout 5
+rede f"Ich fange mit Buch {x} an."
+
+Crashout 20
+rede f"Ich bin bei Seite {xx} vom Buch {x}."
+
+Crashout 30
+rede f"Ich bin bei Zeile {xxx} der Seite {xx} vom Buch {x}."
+sybau
+
+sybau
+
+sybau
+```
+###### Python equivalent:
+```python
+for x in range(5):
+    print(f"Ich fange mit Buch {x} an.")
+    for xx in range(20):
+        print(f"Ich bin bei Seite {xx} vom Buch {x}.")
+        for xxx in range(30):
+            print(f"Ich bin bei Zeile {xxx} der Seite {xx} vom Buch {x}.")
+```

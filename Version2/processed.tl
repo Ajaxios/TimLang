@@ -22,10 +22,12 @@ rand? /roll 1d342
 rede rand
 schere
 rede "Hallo"
-Crashout 3
-rede "Hallo!"
-Crashout 2
-rand? /roll 1d100
-rede rand
+Crashout 5
+rede f"Ich fange mit Buch {x} an."
+Crashout 20
+rede f"Ich bin bei Seite {xx} vom Buch {x}."
+Crashout 30
+rede f"Ich bin bei Zeile {xxx} der Seite {xx} vom Buch {x}."
+sybau
 sybau
 sybau

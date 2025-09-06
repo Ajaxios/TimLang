@@ -161,7 +161,10 @@ for x in range(len(lines)):
         if len(words) == 2:
             if (words[1].isdigit()):
                 amount = words[1]
-                py_input += f"for x in range({amount}):"
+                countervar = "x"
+                for x in range(isinloop):
+                    countervar += "x"
+                py_input += f"for {countervar} in range({amount}):"
                 isinloop += 1
     #endregion
 
