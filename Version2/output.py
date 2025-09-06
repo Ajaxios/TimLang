@@ -22,3 +22,12 @@ rand = [0 for x in range(5)]
 print(rand)
 rand = 0
 print(rand)
+print("Schere")
+print("Hallo")
+for x in range(10):
+	print("Hallo!")
+	
+for x in range(25):
+	rand = random.randint(1, 100)
+	print(rand)
+	

@@ -1,6 +1,19 @@
 Concept of TimLang .tl
 
 # Declaring a variable
+# String variable
+literarisch: "Dies ist ein Text"
+
+# Bool Variable
+valid cool? nocap
+valid cool? cap
+
+# Float variable
+fühl ich menge? 5.0
+
+# Int variable (Prank)
+int menge? 10
+
 produktiv? nein
 
 # Creating a Tim (prints 'Herzlich willkommen bei der Telekom, Tim!")
@@ -24,9 +37,11 @@ Zeig Baguette {
 }
 
 # Loop
-Crashout 20 {
-    rede "Kurbeln!"
-}
+Crashout 20
+rede "Kurbeln!"
+
+# ending the loop region
+sybau
 
 
 
@@ -43,11 +58,20 @@ Schere
 # Random number (only 1d4, 1d6, 1d8, 1d10, 1d12, 1d20)
 /roll 1d20
 
+# Random number
+# Returns 10 random numbers
+Alpharandom (Müller)
+
+# Returns a random integer between 1 and 9
+Alpharandom (Das crazy)
+
 # If Condition
 schwöre True {
     rede "Okay check"
 }
 # else Condition
-schere {
-    rede "Du kleiner Airi"
+Brieftaube {
+    # break statement
+    tot
 }
+

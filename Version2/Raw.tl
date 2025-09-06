@@ -41,3 +41,18 @@ rede rand
 
 rand? /roll 1d342
 rede rand
+
+schere
+rede "Hallo"
+
+Crashout 10 
+
+rede "Hallo!"
+
+sybau
+
+Crashout 25
+
+rand? /roll 1d100
+rede rand
+sybau

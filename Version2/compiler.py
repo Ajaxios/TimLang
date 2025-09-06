@@ -3,7 +3,9 @@ lines = []
 truebool = "ja"
 falsebool = "nein"
 
-with open ("Version1\\processed.tl", "r") as f:
+isinloop = False
+
+with open ("Version2\\processed.tl", "r") as f:
     lines = (f.readlines())
 
 def is_float(value):
@@ -18,7 +20,7 @@ def is_float(value):
 def get_packages():
     return "import random"
 
-with open ("Version1\\output.py", "w") as f:
+with open ("Version2\\output.py", "w") as f:
     f.write("# Welcome to the Compiler!\n")
     f.write(f"{get_packages()}\n")
 
@@ -28,6 +30,10 @@ for x in range(len(lines)):
     variable_declaration = False
 
     print("Wörter:", words)
+
+    # Is the current statement in a loop
+    if isinloop:
+        py_input += "\t"
 
     #region Variables
     for y in range(len(words)):
@@ -54,24 +60,24 @@ for x in range(len(lines)):
             variable_name = words[0].replace('?', '')
             variable_value = words[1]
             if type(variable_value) == int or is_float(variable_value):
-                py_input = f"{variable_name} = {variable_value}"
+                py_input += f"{variable_name} = {variable_value}"
             else:
                 if variable_value.lower() == truebool:
-                    py_input = f"{variable_name} = True"
+                    py_input += f"{variable_name} = True"
                 else:
-                    py_input = f"{variable_name} = False"
+                    py_input += f"{variable_name} = False"
     #endregion
     
     # region Variable declaration (String)
     if (variable_declaration and is_string):
         variable_name = words[0].replace('?', '')
-        py_input = variable_name
+        # py_input += variable_name
         words.pop(0)
         string_value = ""
         for z in words:
             string_value += z + " "
         # variable_value = [word[1:] for word in words]
-        py_input = f"{variable_name} = {string_value}"
+        py_input += f"{variable_name} = {string_value}"
     #endregion
     
     # region Variable declaration (random number (roll a dice))
@@ -89,7 +95,7 @@ for x in range(len(lines)):
         amount_of_dices = dices[0]
         dice = dices[1]
 
-        py_input = f"{variable_name} = "
+        py_input += f"{variable_name} = "
         if amount_of_dices == "1":
             if dice == "4":
                 py_input += f"random.randint(1, 4)"
@@ -134,20 +140,35 @@ for x in range(len(lines)):
     #endregion
 
     #region printing out 
-    if words[0] == "rede":
+    if len(words) > 0 and words[0] == "rede":
         print_content = ""
         for y in range(1, len(words)):
             print_content += words[y]
             # Add Space but not at the end - formatting perfection skill issue
             if (y < len(words) - 1):
                 print_content += " "
-        py_input = f"print({print_content})"
+        py_input += f"print({print_content})"
     #endregion
     
     #region Schere
     if len(words) == 1:
         if words[0].lower() == "schere":
-            py_input = "print(\"Schere\")"
+            py_input += "print(\"Schere\")"
+    #endregion
+
+    #region begin a Loop (under construction)
+    if len(words) > 0 and words[0] == "Crashout":
+        if len(words) == 2:
+            if (words[1].isdigit()):
+                amount = words[1]
+                py_input += f"for x in range({amount}):"
+                isinloop = True
+    #endregion
+
+    #region end a Loop
+    if len(words) == 1:
+        if words[0].lower() == "sybau":
+            isinloop = False
     #endregion
 
     # Variable declaration
@@ -166,5 +187,5 @@ for x in range(len(lines)):
     #         py_input += y 
     #     py_input = f"# {py_input}"
 
-    with open ("Version1\\output.py", "a") as f:
+    with open ("Version2\\output.py", "a") as f:
         f.write(py_input + "\n")

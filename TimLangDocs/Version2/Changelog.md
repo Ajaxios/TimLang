@@ -7,12 +7,12 @@ Zeig HomeOffice {
     rede "Tim macht HO"
 }
 ```
-- Loops
+- Loops (check)
 ```python
 # Loop
-Crashout 20 {
-    rede "Kurbeln!"
-}
+Crashout 20
+rede "Kurbeln!"
+sybau
 ```
 - If/Else
 ```python

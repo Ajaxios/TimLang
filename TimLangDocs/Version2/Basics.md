@@ -51,7 +51,7 @@ seltsam? /roll 1d500
 seltsamer? /roll 5d500
 ```
 `-> [0, 0, 0, 0, 0]`
-### String Concatenation
+#### String Concatenation
 TimLang unterstützt die gleiche String Conatenation wie in Python. Bei Tupeln wird es generell eher empfohlen, mit einem Komma `,` statt dem Plus `+` zu arbeiten, falls Zahlen beteiligt sind. Anderseits kann man einfach die Methode `str(...)` verwenden. Hier ein Beispiel:
 ```python
 # satz ist ein Tupel
@@ -96,3 +96,12 @@ Schere
 schere
 ```
 `-> Schere`
+
+# Loops
+#### `Crashout <range>`
+Führt einen Loop durch für die angegebene Duration. Der Loop wird mit `sybau` beendet
+```python
+Crashout 20
+rede "Hallo!"
+sbyau
+```
