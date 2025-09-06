@@ -22,10 +22,10 @@ rand? /roll 1d342
 rede rand
 schere
 rede "Hallo"
-Crashout 10
+Crashout 3
 rede "Hallo!"
-sybau
-Crashout 25
+Crashout 2
 rand? /roll 1d100
 rede rand
+sybau
 sybau

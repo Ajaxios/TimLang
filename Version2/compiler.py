@@ -3,7 +3,7 @@ lines = []
 truebool = "ja"
 falsebool = "nein"
 
-isinloop = False
+isinloop = 0
 
 with open ("Version2\\processed.tl", "r") as f:
     lines = (f.readlines())
@@ -32,7 +32,7 @@ for x in range(len(lines)):
     print("Wörter:", words)
 
     # Is the current statement in a loop
-    if isinloop:
+    for x in range(isinloop):
         py_input += "\t"
 
     #region Variables
@@ -162,13 +162,14 @@ for x in range(len(lines)):
             if (words[1].isdigit()):
                 amount = words[1]
                 py_input += f"for x in range({amount}):"
-                isinloop = True
+                isinloop += 1
     #endregion
 
     #region end a Loop
     if len(words) == 1:
         if words[0].lower() == "sybau":
-            isinloop = False
+            if isinloop > 0:
+                isinloop -= 1
     #endregion
 
     # Variable declaration

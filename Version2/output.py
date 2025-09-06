@@ -24,10 +24,10 @@ rand = 0
 print(rand)
 print("Schere")
 print("Hallo")
-for x in range(10):
+for x in range(3):
 	print("Hallo!")
-	
-for x in range(25):
-	rand = random.randint(1, 100)
-	print(rand)
+	for x in range(2):
+		rand = random.randint(1, 100)
+		print(rand)
+		
 	
